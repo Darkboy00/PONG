@@ -31,4 +31,11 @@ public class Paddle : MonoBehaviour
         rb.velocity = Vector2.zero;
         transform.position = startPosition;
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Ball")
+        {
+            AudioManager.Instance.PlaySFX("Pong");
+        }
+    }
 }

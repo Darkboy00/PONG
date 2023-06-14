@@ -13,11 +13,13 @@ public class Goal : MonoBehaviour
             {
                 Debug.Log("Player 2 Scored...");
                 GameObject.Find("GameManager").GetComponent<GameManager>().Player2Scored();
+                AudioManager.Instance.PlaySFX("Win");
             }
             else
             {
                 Debug.Log("Player 1 Scored...");
                 GameObject.Find("GameManager").GetComponent<GameManager>().Player1Scored();
+                AudioManager.Instance.PlaySFX("Win");
             }
         }
     }
