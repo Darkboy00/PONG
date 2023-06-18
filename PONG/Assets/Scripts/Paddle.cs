@@ -35,6 +35,7 @@ public class Paddle : MonoBehaviour
     {
         if(col.gameObject.tag == "Ball")
         {
+            CameraShaker.Invoke();
             AudioManager.Instance.PlaySFX("Pong");
         }
     }
